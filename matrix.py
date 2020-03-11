@@ -22,7 +22,7 @@ def generate_curve_coefs( p0, p1, p2, p3, type ):
     m = [[p0,p1,p2,p3]]
     if type == 'hermite':
         matrix_mult(make_hermite(),m)
-        print_matrix(m)
+        #print_matrix(m)
     else:
         matrix_mult(make_bezier(),m)
     return m[0]

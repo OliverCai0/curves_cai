@@ -15,14 +15,14 @@ def add_circle( points, cx, cy, cz, r):
 
 def add_curve( points, x0, y0, x1, y1, x2, y2, x3, y3, step, curve_type ):
     x_coef = generate_curve_coefs(x0,x1,x2,x3,curve_type)
-    print()
-    print(x_coef)
+    #print()
+    #3print(x_coef)
     y_coef = generate_curve_coefs(y0,y1,y2,y3,curve_type)
     t = 0
     while t < 1:
         x = x_coef[3] + t * ( x_coef[2] + t * ( x_coef[1] + t * x_coef[0]))
         y = y_coef[3] + t * ( y_coef[2] + t * ( y_coef[1] + t * y_coef[0]))
-        print(x)
+        #print(x)
         add_point(points,round(x),round(y))
         t += step
         #print('yes!')
